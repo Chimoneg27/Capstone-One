@@ -32,12 +32,12 @@
 
   header {
     width: 100%;
+    height: auto;
     top: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: auto;
     z-index: 3;
   }
 
@@ -135,14 +135,9 @@
   .intro-banner {
     width: 100%;
     height: auto;
+    margin-top: -2rem;
     background-image: none;
-    margin-top: -3rem;
-    padding: 3rem 0;
-    background-position-y: 10%;
-    background-attachment: scroll;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-size: 100%;
+    padding: 0;
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -153,164 +148,88 @@
     width: 100%;
     height: 100%;
     padding: 5rem 1rem;
+    background-size: cover;
     background-image: url(../images/desktop-images/landing.png);
   }
 
-  .intro h2 {
-    font-family: "Lato", 'Times New Roman', Times, serif;
-    font-size: 2rem;
-    width: 60%;
-    font-weight: 700;
-    color: var(--soft-orange);
-  }
-
-  .intro h2::before {
-    content: '"';
-  }
-
-  .intro h2::after {
-    content: '"';
-  }
-
-  .intro h1 span {
-    font-size: 3rem;
-  }
-
   .intro h1 {
-    width: 60%;
-    font-family: Cocogoose, 'Lato', 'Times New Roman', Times, serif;
-    font-size: 4rem;
+    margin-top: 0;
+    width: 40%;
+  }
+
+  .intro h1::before {
+    content: 'Formula One Presents ';
+  }
+
+  .intro h2 {
+    display: none;
   }
 
   .intro p {
-    width: 60%;
-    margin-top: 1rem;
-    background-color: #f0e8e8e7;
-    border: solid 5px var(--hard-white);
-    padding: 1rem;
+    width: 50%;
   }
 
-  .intro .dates {
-    font-size: 2.5rem;
-    margin-top: 1rem;
-  }
-
-  .intro h4 {
-    width: 60%;
-  }
-
-  .the {
-    display: none;
-  }
-
-  .f-1 {
-    display: block;
-    font-size: 4rem;
-    color: var(--soft-orange);
-    font-weight: 700;
-    font-family: "Cocogoose", 'Lato', 'Times New Roman', Times, serif;
-  }
-
-  .events {
-    display: grid;
-    width: 80%;
-    height: 300px;
-    grid-template-columns: repeat(5, 20%);
-    margin-top: 2rem;
-    justify-content: center;
-    gap: 0;
-  }
-
-  .event-link {
-    display: block;
-    text-decoration: none;
-    color: var(--hard-white);
+  .contacts-details {
     font-family: 'Lato', 'Times New Roman', Times, serif;
-    font-weight: 400;
-    margin-top: 4rem;
-    border-bottom: solid 1px var(--hard-white);
   }
 
-  main {
-    margin-top: -2.85rem;
+  .about-logo {
+    width: 50%;
+    margin: 0 auto;
   }
 
-  .activity {
-    white-space: pre-wrap;
-    width: 99%;
-    height: auto;
-    padding: 1.15rem 0.5rem;
-    list-style: none;
-    background-color: rgba(80, 82, 88, 0.7);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    color: var(--white);
-    font-family: "Lato", 'Times New Roman', Times, serif;
-    text-align: center;
-  }
-
-  .activity:hover {
-    border: solid 2px var(--hard-white);
-  }
-
-  main button {
-    display: none;
-  }
-
-  .list-title {
-    color: var(--f1-red);
-  }
-
-  .list-desc {
-    font-weight: 400;
-  }
-
-  .list-img img {
-    width: 3.75rem;
-    height: 3.75rem;
-  }
-
-  .extra {
+  .more {
     display: block;
   }
 
-  #card-container {
-    display: grid;
+  .event br {
+    display: none;
+  }
+
+  .f1-logo-about {
+    width: 50%;
+    margin-bottom: 1rem;
+    color: var(--dark-grey);
+  }
+
+  .partner-container {
+    display: none;
+  }
+
+  .race-container {
     width: 100%;
-    padding: 1rem 3rem;
-    justify-items: center;
-    align-items: center;
-  }
-
-  .racer {
-    width: 80%;
-    background-repeat: no-repeat;
-    background-position: top left;
-    background-size: 4rem 4rem;
-    padding: 0.75rem;
-  }
-
-  .partners {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: none;
-    background-color: var(--capstone-grey);
-    justify-items: center;
-    align-items: center;
-    padding: 1rem;
-    gap: 0;
-    margin-top: 2rem;
-    width: 90%;
-  }
-
-  .partners img {
-    width: 80%;
-    padding: 0;
+    height: auto;
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
+    gap: 2rem;
+  }
+
+  .race-1 {
+    background-image: url(../images/pastfour.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0% 35%;
+    width: 40%;
+    height: 12.75rem;
+  }
+
+  .race-2 {
+    background-image: url(../images/pastthree.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0% 35%;
+    width: 40%;
+    height: 12.75rem;
+  }
+
+  .past-races br {
+    display: none;
+  }
+
+  .past-races p {
+    margin-bottom: 4rem;
   }
 
   .liscence {
@@ -323,16 +242,20 @@
 
   .liscence-1 {
     display: none;
+    color: var(--hard-white);
   }
 
   .liscence-2 {
+    color: var(--hard-white);
     display: flex;
     flex-direction: column;
     gap: 0.1rem;
   }
 
   footer {
+    color: white;
     padding: 1rem 2rem;
+    background-color: var(--capstone-grey);
   }
 
   .logo {
@@ -355,6 +278,14 @@
 
   .second-footer-p {
     display: block;
+  }
+
+  .bg-grey {
+    display: block;
+  }
+
+  .bg-white {
+    display: none;
   }
 }
 
