@@ -47,7 +47,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [The Monaco Grand Prix Live demo](https://chimoneg27.github.io/Capstone-1-Portal/)
+- [The Monaco Grand Prix Live demo](https://chimoneg27.github.io/Capstone-One/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
