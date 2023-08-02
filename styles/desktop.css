@@ -44,15 +44,17 @@
   .top-ribbon {
     display: flex;
     background-color: var(--capstone-grey);
-    padding: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-right: 3.65rem;
     width: 100%;
     justify-content: end;
     font-size: 0.85rem;
   }
 
   nav h2 img {
-    width: 15%;
-    height: 15%;
+    width: 45%;
+    height: 85px;
   }
 
   .top-ribbon img {
@@ -81,11 +83,12 @@
   nav {
     position: initial;
     display: flex;
-    justify-content: space-between;
+    gap: 3rem;
+    height: 90px;
     align-items: center;
     width: 100%;
     font-family: 'Lato', 'Times New Roman', Times, serif;
-    padding: 1rem 1.25rem;
+    padding: 0 1.25rem;
     background-color: var(--hard-white);
   }
 
@@ -93,7 +96,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40%;
+    width: 30%;
   }
 
   nav h2 a {
@@ -106,9 +109,10 @@
   .desktop-nav {
     display: flex;
     padding: 0.5rem;
-    gap: 1rem;
+    gap: 0.25rem;
     list-style: none;
     width: 60%;
+    justify-content: center;
     font-weight: 700;
   }
 
@@ -130,10 +134,10 @@
 
   .intro-banner {
     width: 100%;
-    margin-top: -2rem;
-    height: 39rem;
+    height: auto;
+    background-image: none;
+    margin-top: -3rem;
     padding: 3rem 0;
-    background-image: url(../images/desktop-images/landing.png);
     background-position-y: 10%;
     background-attachment: scroll;
     background-repeat: no-repeat;
@@ -149,6 +153,7 @@
     width: 100%;
     height: 100%;
     padding: 5rem 1rem;
+    background-image: url(../images/desktop-images/landing.png);
   }
 
   .intro h2 {
@@ -208,8 +213,8 @@
 
   .events {
     display: grid;
-    width: 95%;
-    height: 15.5rem;
+    width: 80%;
+    height: 300px;
     grid-template-columns: repeat(5, 20%);
     margin-top: 2rem;
     justify-content: center;
@@ -227,12 +232,14 @@
   }
 
   main {
-    margin-top: -1rem;
+    margin-top: -2.85rem;
   }
 
   .activity {
+    white-space: pre-wrap;
     width: 99%;
-    padding: 1rem 0.25rem;
+    height: auto;
+    padding: 1.15rem 0.5rem;
     list-style: none;
     background-color: rgba(80, 82, 88, 0.7);
     display: flex;
@@ -271,15 +278,18 @@
 
   #card-container {
     display: grid;
-    grid-template-columns: repeat(2, 50%);
     width: 100%;
-    padding: 1rem 5rem;
+    padding: 1rem 3rem;
     justify-items: center;
     align-items: center;
   }
 
   .racer {
     width: 80%;
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: 4rem 4rem;
+    padding: 0.75rem;
   }
 
   .partners {
@@ -307,7 +317,7 @@
     font-size: 1rem;
     color: var(--dark-grey);
     font-weight: 700;
-    width: 60%;
+    width: 65%;
     display: flex;
   }
 
@@ -326,6 +336,20 @@
   }
 
   .logo {
+    width: 35%;
+    justify-content: right;
+  }
+
+  .logo img {
+    width: 30%;
+    aspect-ratio: 2/1;
+  }
+
+  .logo-text {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    text-align: left;
     width: 40%;
   }
 
@@ -336,12 +360,58 @@
 
 @media (min-width: 886px) {
   .desktop-nav {
-    gap: 2.75rem;
+    gap: 1rem;
+  }
+}
+
+@media (min-width: 950px) {
+  .top-ribbon {
+    padding-right: 5.25rem;
+  }
+}
+
+@media (min-width: 1039px) {
+  #card-container {
+    grid-template-columns: repeat(2, 50%);
+  }
+
+  .top-ribbon {
+    padding-right: 5.75rem;
   }
 }
 
 @media (min-width: 1075px) {
   .desktop-nav {
-    gap: 4rem;
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 1137px) {
+  .top-ribbon {
+    padding-right: 7.25rem;
+  }
+}
+
+@media (min-width: 1235px) {
+  .top-ribbon {
+    padding-right: 8rem;
+  }
+}
+
+@media (min-width: 1295px) {
+  .top-ribbon {
+    padding-right: 8.45rem;
+  }
+}
+
+@media (min-width: 1300px) {
+  .top-ribbon {
+    padding-right: 9.75rem;
+  }
+}
+
+@media (min-width: 1410px) {
+  .top-ribbon {
+    padding-right: 10.25rem;
   }
 }
