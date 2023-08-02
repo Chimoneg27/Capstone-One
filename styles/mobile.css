@@ -1,440 +1,439 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  @font-face {
-    font-family: Cocogoose;
-    src: url(../styles/fonts/cocogoose-classic/Cocogoose-Classic-ExtraBold-trial.ttf);
-  }
-  
-  @font-face {
-    font-family: CocogooseBold;
-    src: url(../styles/fonts/cocogoose-classic/Cocogoose-Classic-Medium-trial.ttf);
-  }
-  
-  :root {
-    --white: #fff;
-    --capstone-grey: #272a31;
-    --soft-orange: #ec5242;
-    --light-grey: #d3d3d3;
-    --black: #0e0000;
-    --f1-red: #e00700;
-    --dark-grey: #4b4d4c;
-    --hard-white: #fff7f7;
-  }
-  
-  html {
-    scroll-behavior: smooth;
-  }
-  
-  body {
-    position: relative;
-  }
-  
-  .top-ribbon {
-    display: none;
-  }
-  
-  nav {
-    padding: 0.75rem;
-    font-family: "Roboto", 'Times New Roman', Times, serif;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: absolute;
-    top: -3rem;
-    width: 100%;
-    z-index: 2;
-  }
-  
-  nav h2 {
-    display: none;
-  }
-  
-  .desktop-nav {
-    display: none;
-  }
-  
-  nav a {
-    text-decoration: none;
-    color: inherit;
-  }
-  
-  .burger-menu {
-    height: auto;
-    width: auto;
-    display: flex;
-    margin-right: 1rem;
-    flex-direction: column;
-    gap: 0.35rem;
-    align-items: center;
-    z-index: 10;
-  }
-  
-  .bar {
-    width: 1.825rem;
-    height: 0.35rem;
-    background-color: var(--capstone-grey);
-    transition: all 0.5s ease;
-    z-index: 11;
-  }
-  
-  .burger-menu.active .bar:nth-child(2) {
-    opacity: 0;
-  }
-  
-  .burger-menu.active .bar:nth-child(1) {
-    transform: translateY(11px) rotate(45deg);
-  }
-  
-  .burger-menu.active .bar:nth-child(3) {
-    transform: translateY(-11px) rotate(-45deg);
-  }
-  
-  .mobile-nav {
-    list-style: none;
-    position: fixed;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    padding: 4rem 1.75rem;
-    gap: 2rem;
-    color: var(--black);
-    font-size: 2rem;
-    font-family: "Lato", 'Times New Roman', Times, serif;
-    font-weight: 700;
-    background-color: var(--white);
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    transition: 0.6s ease;
-    line-height: 2.75rem;
-  }
-  
-  .page-links {
-    border-bottom: 1px solid var(--f1-red);
-    padding-bottom: 0.25rem;
-  }
-  
-  .page-links:hover {
-    border: 2px dashed var(--f1-red);
-  }
-  
-  .mobile-nav.active {
-    left: 0;
-  }
-  
-  header {
-    width: 100%;
-    height: auto;
-  }
-  
-  .intro-banner {
-    margin-top: 4rem;
-    width: 100%;
-    height: 40rem;
-    padding: 1rem;
-    background-image: url(../images/monacoabout.jpg);
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-size: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .intro {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  main h2 {
-    font-family: "Lato", 'Times New Roman', Times, serif;
-    font-weight: 600;
-    color: var(--white);
-    padding: 0.5rem;
-    border-bottom: 2px solid var(--f1-red);
-  }
-  
-  .intro h2 {
-    font-family: "Lato", 'Times New Roman', Times, serif;
-    font-size: 1.5rem;
-    width: 100%;
-    font-weight: 400;
-    color: var(--soft-orange);
-  }
-  
-  .intro h1 {
-    font-size: 3rem;
-    color: var(--soft-orange);
-    font-weight: 700;
-    font-family: "Cocogoose", 'Lato' ,'Times New Roman', Times, serif;
-  }
-  
-  .f-1 {
-    display: none;
-  }
-  
-  .intro h1 span {
-    font-family: "Lato", 'Times New Roman', Times, serif;
-    font-size: 3rem;
-    color: var(--soft-orange);
-    font-weight: 700;
-  }
-  
-  .intro p {
-    width: 100%;
-    font-size: 1rem;
-    margin-top: 6rem;
-    padding: 0.25rem;
-    background-color: var(--hard-white);
-    font-family: "Lato", 'Times New Roman', Times, serif;
-    line-height: 1.5rem;
-    font-weight: 600;
-    border: 1px solid var(--f1-red);
-  }
-  
-  .intro .dates {
-    color: var(--dark-grey);
-    font-size: 1.5rem;
-    font-weight: 700;
-  }
-  
-  .intro h4 {
-    color: var(--dark-grey);
-    font-family: "Lato", 'Times New Roman', Times, serif;
-    font-size: 1.25rem;
-    font-weight: 700;
-    width: 100%;
-    text-align: start;
-  }
-  
-  main {
-    width: 100%;
-    height: auto;
-    padding: 2rem 0.25rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    align-items: center;
-    background-color: var(--capstone-grey);
-    margin-top: 1rem;
-    position: relative;
-  }
-  
-  .events {
-    display: grid;
-    width: 100%;
-    height: auto;
-    grid-template-columns: 95%;
-    grid-template-rows: repeat(5, 1fr);
-    margin-top: 2rem;
-    justify-content: center;
-    gap: 1rem;
-  }
-  
-  .activity {
-    width: 100%;
-    padding: 1rem 0.5rem;
-    list-style: none;
-    background-color: rgba(255, 255, 255, 0.5);
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 1rem;
-    color: var(--white);
-    font-family: "Lato", 'Times New Roman', Times, serif;
-  }
-  
-  .activity li {
-    padding: 0.25rem;
-  }
-  
-  .list-img {
-    width: auto;
-    height: auto;
-  }
-  
-  .list-img img {
-    width: 3rem;
-    height: 3rem;
-  }
-  
-  .list-title {
-    font-weight: 700;
-    font-size: 1.25rem;
-  }
-  
-  .list-desc {
-    font-weight: 700;
-    font-size: 1rem;
-  }
-  
-  .extra {
-    display: none;
-  }
-  
-  .event-link {
-    display: none;
-  }
-  
-  main button {
-    margin-top: 2rem;
-    border: none;
-    padding: 1.5rem;
-    width: 80%;
-    font-family: "Lato", 'Times New Roman', Times, serif;
-    font-size: 1.25rem;
-    color: var(--white);
-    background-color: var(--soft-orange);
-    font-weight: 700;
-  }
-  
-  .drivers {
-    padding: 2rem 0.25rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1.25rem;
-  }
-  
-  .drivers h2 {
-    font-size: 2rem;
-    font-family: "Lato", 'Times New Roman', Times, serif;
-    font-weight: 700;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .drivers hr {
-    width: 60%;
-    background-color: var(--f1-red);
-    height: 3px;
-  }
-  
-  #card-container {
-    display: grid;
-  }
-  
-  .racer img {
-    width: 8rem;
-    height: 8rem;
-  }
-  
-  .racer {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    padding: 0.5rem;
-    font-family: "Lato", 'Times New Roman', Times, serif;
-    background-image: url(../images/chessboardsvgrepo-com.svg);
-    background-repeat: no-repeat;
-    background-size: 5rem 5rem;
-  }
-  
-  .about-driver h3 {
-    font-size: 1.35rem;
-    margin-bottom: 0.25rem;
-  }
-  
-  .about-driver h4 {
-    font-style: italic;
-    color: var(--soft-orange);
-    margin-bottom: 0.45rem;
-  }
-  
-  .about-driver hr {
-    width: 20%;
-    height: 0.15rem;
-    margin-bottom: 0.45rem;
-  }
-  
-  .about-driver p {
-    font-size: 0.85rem;
-    font-weight: 700;
-  }
-  
-  .partners img {
-    width: 60%;
-    padding: 0.25rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .partner-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0.25rem;
-    width: 100%;
-    background-color: var(--capstone-grey);
-  }
-  
-  .partner-container h2 {
-    color: var(--white);
-    border-bottom: 5px solid var(--f1-red);
-    font-family: "Lato", 'Times New Roman', Times, serif;
-    margin-top: 0.5rem;
-  }
-  
-  .partners {
-    display: grid;
-    grid-template-columns: repeat(3, 40%);
-    padding: 1rem;
-    background-color: var(--capstone-grey);
-  }
-  
-  footer {
-    font-family: "Lato", 'Times New Roman', Times, serif;
-    width: 100%;
-    padding: 0.35rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-  }
-  
-  .logo-text {
-    font-weight: 700;
-    font-size: 1.15rem;
-  }
-  
-  .liscence {
-    font-size: 1rem;
-    color: var(--dark-grey);
-    font-weight: 700;
-    width: 50%;
-  }
-  
-  .liscence-2 {
-    display: none;
-  }
-  
-  .logo img {
-    width: 40%;
-  }
-  
-  .logo {
-    display: flex;
-    align-items: center;
-    width: 50%;
-  }
-  
-  .second-footer-p {
-    display: none;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Cocogoose;
+  src: url(../styles/fonts/cocogoose-classic/Cocogoose-Classic-ExtraBold-trial.ttf);
+}
+
+@font-face {
+  font-family: CocogooseBold;
+  src: url(../styles/fonts/cocogoose-classic/Cocogoose-Classic-Medium-trial.ttf);
+}
+
+:root {
+  --white: #fff;
+  --capstone-grey: #272a31;
+  --soft-orange: #ec5242;
+  --light-grey: #d3d3d3;
+  --black: #0e0000;
+  --f1-red: #e00700;
+  --dark-grey: #4b4d4c;
+  --hard-white: #fff7f7;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+}
+
+.top-ribbon {
+  display: none;
+}
+
+nav {
+  padding: 0.75rem;
+  font-family: "Roboto", 'Times New Roman', Times, serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: -3rem;
+  width: 100%;
+  z-index: 2;
+}
+
+nav h2 {
+  display: none;
+}
+
+.desktop-nav {
+  display: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.burger-menu {
+  height: auto;
+  width: auto;
+  display: flex;
+  margin-right: 1rem;
+  flex-direction: column;
+  gap: 0.35rem;
+  align-items: center;
+  z-index: 10;
+}
+
+.bar {
+  width: 1.825rem;
+  height: 0.35rem;
+  background-color: var(--capstone-grey);
+  transition: all 0.5s ease;
+  z-index: 11;
+}
+
+.burger-menu.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.burger-menu.active .bar:nth-child(1) {
+  transform: translateY(11px) rotate(45deg);
+}
+
+.burger-menu.active .bar:nth-child(3) {
+  transform: translateY(-11px) rotate(-45deg);
+}
+
+.mobile-nav {
+  list-style: none;
+  position: fixed;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  padding: 4rem 1.75rem;
+  gap: 2rem;
+  color: var(--black);
+  font-size: 2rem;
+  font-family: "Lato", 'Times New Roman', Times, serif;
+  font-weight: 700;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  transition: 0.6s ease;
+  line-height: 2.75rem;
+}
+
+.page-links {
+  border-bottom: 1px solid var(--f1-red);
+  padding-bottom: 0.25rem;
+}
+
+.page-links:hover {
+  border: 2px dashed var(--f1-red);
+}
+
+.mobile-nav.active {
+  left: 0;
+}
+
+header {
+  width: 100%;
+  height: auto;
+}
+
+.intro-banner {
+  margin-top: 4rem;
+  width: 100%;
+  height: 40rem;
+  padding: 1rem;
+  background-image: url(../images/monacoabout.jpg);
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+main h2 {
+  font-family: "Lato", 'Times New Roman', Times, serif;
+  font-weight: 600;
+  color: var(--white);
+  padding: 0.5rem;
+  border-bottom: 2px solid var(--f1-red);
+}
+
+.intro h2 {
+  font-family: "Lato", 'Times New Roman', Times, serif;
+  font-size: 1.5rem;
+  width: 100%;
+  font-weight: 400;
+  color: var(--soft-orange);
+}
+
+.intro h1 {
+  font-size: 3rem;
+  color: var(--soft-orange);
+  font-weight: 700;
+  font-family: "Cocogoose", 'Lato', 'Times New Roman', Times, serif;
+}
+
+.f-1 {
+  display: none;
+}
+
+.intro h1 span {
+  font-family: "Lato", 'Times New Roman', Times, serif;
+  font-size: 3rem;
+  color: var(--soft-orange);
+  font-weight: 700;
+}
+
+.intro p {
+  width: 100%;
+  font-size: 1rem;
+  margin-top: 6rem;
+  padding: 0.25rem;
+  background-color: var(--hard-white);
+  font-family: "Lato", 'Times New Roman', Times, serif;
+  line-height: 1.5rem;
+  font-weight: 600;
+  border: 1px solid var(--f1-red);
+}
+
+.intro .dates {
+  color: var(--dark-grey);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.intro h4 {
+  color: var(--dark-grey);
+  font-family: "Lato", 'Times New Roman', Times, serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  width: 100%;
+  text-align: start;
+}
+
+main {
+  width: 100%;
+  height: auto;
+  padding: 2rem 0.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  background-color: var(--capstone-grey);
+  margin-top: 1rem;
+  position: relative;
+}
+
+.events {
+  display: grid;
+  width: 100%;
+  height: auto;
+  grid-template-columns: 95%;
+  grid-template-rows: repeat(5, 1fr);
+  margin-top: 2rem;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.activity {
+  width: 100%;
+  padding: 1rem 0.5rem;
+  list-style: none;
+  background-color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 1rem;
+  color: var(--white);
+  font-family: "Lato", 'Times New Roman', Times, serif;
+}
+
+.activity li {
+  padding: 0.25rem;
+}
+
+.list-img {
+  width: auto;
+  height: auto;
+}
+
+.list-img img {
+  width: 3rem;
+  height: 3rem;
+}
+
+.list-title {
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.list-desc {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.extra {
+  display: none;
+}
+
+.event-link {
+  display: none;
+}
+
+main button {
+  margin-top: 2rem;
+  border: none;
+  padding: 1.5rem;
+  width: 80%;
+  font-family: "Lato", 'Times New Roman', Times, serif;
+  font-size: 1.25rem;
+  color: var(--white);
+  background-color: var(--soft-orange);
+  font-weight: 700;
+}
+
+.drivers {
+  padding: 2rem 0.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.drivers h2 {
+  font-size: 2rem;
+  font-family: "Lato", 'Times New Roman', Times, serif;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.drivers hr {
+  width: 60%;
+  background-color: var(--f1-red);
+  height: 3px;
+}
+
+#card-container {
+  display: grid;
+}
+
+.racer img {
+  width: 8rem;
+  height: 8rem;
+}
+
+.racer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem;
+  font-family: "Lato", 'Times New Roman', Times, serif;
+  background-image: url(../images/chessboardsvgrepo-com.svg);
+  background-repeat: no-repeat;
+  background-size: 5rem 5rem;
+}
+
+.about-driver h3 {
+  font-size: 1.35rem;
+  margin-bottom: 0.25rem;
+}
+
+.about-driver h4 {
+  font-style: italic;
+  color: var(--soft-orange);
+  margin-bottom: 0.45rem;
+}
+
+.about-driver hr {
+  width: 20%;
+  height: 0.15rem;
+  margin-bottom: 0.45rem;
+}
+
+.about-driver p {
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.partners img {
+  width: 60%;
+  padding: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.partner-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.25rem;
+  width: 100%;
+  background-color: var(--capstone-grey);
+}
+
+.partner-container h2 {
+  color: var(--white);
+  border-bottom: 5px solid var(--f1-red);
+  font-family: "Lato", 'Times New Roman', Times, serif;
+  margin-top: 0.5rem;
+}
+
+.partners {
+  display: grid;
+  grid-template-columns: repeat(3, 40%);
+  padding: 1rem;
+  background-color: var(--capstone-grey);
+}
+
+footer {
+  font-family: "Lato", 'Times New Roman', Times, serif;
+  width: 100%;
+  padding: 0.35rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.logo-text {
+  font-weight: 700;
+  font-size: 1.15rem;
+}
+
+.liscence {
+  font-size: 1rem;
+  color: var(--dark-grey);
+  font-weight: 700;
+  width: 50%;
+}
+
+.liscence-2 {
+  display: none;
+}
+
+.logo img {
+  width: 40%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  width: 50%;
+}
+
+.second-footer-p {
+  display: none;
+}
