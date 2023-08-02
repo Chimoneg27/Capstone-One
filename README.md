@@ -76,7 +76,7 @@ In order to run this project you need the following:
 Clone this repository to your desired folder or download the Zip folder:
 
 ```
-git clone https://github.com/Chimoneg27/Capstone-1-Portal.git
+git clone https://github.com/Chimoneg27/Capstone-One.git
 ```
 
 - Navigate to the location of the folder in your machine:
